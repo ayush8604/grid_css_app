@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+ #grid-container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: 
+    "navbar navbar navbar"
+    "left-sidebar main right-sidebar"
+    "left-sidebar main2 right-sidebar";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#navbar {
+  grid-area: navbar;
+  position: sticky;
+  height: 100px;
+  background-color: green;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+#navbar > div:first-child {
+  grid-area: navbar1;
+  color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+#navbar > div:last-child {
+  grid-area: navbar2;
+  color: aliceblue;
+}
+#right-sidebar-1 {
+  margin-bottom: 10px; /* or whatever value you want for the space */
+}
+
+#left-sidebar {
+  height: 100vh;
+  grid-area: left-sidebar;
+  background-color: azure;
+  border: 1px solid black; 
+}
+#right-sidebar-1{
+  background-color: aqua;height: 100vh;
+  height: 50%;
+}
+#right-sidebar-2{
+
+  background-color: rgb(255, 0, 102);
+  height: 50%;
+}
+#row1  {
+background-color: yellowgreen;
+}
+#row2  {
+  background-color: yellow;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#row3  {
+  background-color: violet;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  overflow-y: scroll;
+  height: 200px;
+}
+#main{
+  position: relative;
+  overflow-y: scroll;
+}
+#main2{
+  position: relative;
+}
+#left-sidebar, #right-sidebar {
+  position: relative; 
+}
+@media only screen and (max-width: 600px) {
+  #grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
+
+

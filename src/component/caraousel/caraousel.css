@@ -1,0 +1,26 @@
+.gameCard-img {
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .gameCard-img:hover {
+    transform: scale(1.2);
+  }
+  
+  .GameCard {
+    margin: 0px 14px;
+  }
+  
+  /* .react-multi-carousel-item {
+    width: unset !important;
+  } */
+  /* 
+  .react-multi-carousel-track {
+    gap: 50px;
+  } */
+
+
+  

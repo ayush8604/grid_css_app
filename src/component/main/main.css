@@ -1,0 +1,9 @@
+
+@media only screen and (max-width: 600px) {
+    #screen{
+        font-size:70px
+    }
+    .font{
+        font-size:26px;
+    }
+}
